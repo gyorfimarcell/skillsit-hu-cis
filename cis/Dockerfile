@@ -1,4 +1,4 @@
-FROM openjdk:17.0.2
+FROM eclipse-temurin:25
 
 WORKDIR /app
 COPY . .

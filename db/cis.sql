@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Apr 21, 2024 at 10:07 AM
--- Server version: 11.2.2-MariaDB-1:11.2.2+maria~ubu2204
--- PHP Version: 8.2.8
+-- Generation Time: Nov 11, 2025 at 01:57 PM
+-- Server version: 12.0.2-MariaDB-ubu2404
+-- PHP Version: 8.2.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -532,7 +532,8 @@ INSERT INTO `DATABASECHANGELOG` (`ID`, `AUTHOR`, `FILENAME`, `DATEEXECUTED`, `OR
 ('20220813002500-1', 'adam', 'org/worldskills/cis/database/changelog/db.changelog-0038-5.0.0.xml', '2024-04-21 08:32:22', 248, 'EXECUTED', '8:cb8366b21503ca9435351ec59f356bf8', 'addColumn tableName=skill', '', NULL, '4.6.2', NULL, NULL, '3688329776'),
 ('20220825134700-1', 'adam', 'org/worldskills/cis/database/changelog/db.changelog-0039-5.0.0.xml', '2024-04-21 08:32:22', 249, 'EXECUTED', '8:0dd12a37ec76e0762f1249f666965508', 'addColumn tableName=skill', '', NULL, '4.6.2', NULL, NULL, '3688329776'),
 ('20220909120800-1', 'adam', 'org/worldskills/cis/database/changelog/db.changelog-0040-5.0.0.xml', '2024-04-21 08:32:22', 250, 'EXECUTED', '8:858fc8a101c6ad322444dc301d94f2e8', 'addColumn tableName=skill', '', NULL, '4.6.2', NULL, NULL, '3688329776'),
-('20220909120800-1', 'adam', 'org/worldskills/cis/database/changelog/db.changelog-0041-5.0.0.xml', '2024-04-21 08:32:22', 251, 'EXECUTED', '8:a2397c7c2c99930c65f79364c8d223a7', 'addColumn tableName=skill', '', NULL, '4.6.2', NULL, NULL, '3688329776');
+('20220909120800-1', 'adam', 'org/worldskills/cis/database/changelog/db.changelog-0041-5.0.0.xml', '2024-04-21 08:32:22', 251, 'EXECUTED', '8:a2397c7c2c99930c65f79364c8d223a7', 'addColumn tableName=skill', '', NULL, '4.6.2', NULL, NULL, '3688329776'),
+('20241126222100-1', 'adam', 'org/worldskills/cis/database/changelog/db.changelog-0042-6.0.0.xml', '2025-11-11 13:23:09', 252, 'EXECUTED', '8:e966336145d4f4843be3c3f356f33b4d', 'dropForeignKeyConstraint baseTableName=person_team, constraintName=FK4n0ts32m2ffsjoyp98isswvdx; dropForeignKeyConstraint baseTableName=person_team, constraintName=FK5nm4b09lhr8moaj39v27icmn5; dropUniqueConstraint constraintName=UK_k0t32vjx93gttjmn...', '', NULL, '4.6.2', NULL, NULL, '2867389343');
 
 -- --------------------------------------------------------
 
@@ -1423,8 +1424,8 @@ ALTER TABLE `person_position`
 -- Indexes for table `person_team`
 --
 ALTER TABLE `person_team`
-  ADD UNIQUE KEY `UK_k0t32vjx93gttjmn2e7tkiih5` (`person_id`),
-  ADD KEY `FK5nm4b09lhr8moaj39v27icmn5` (`team_id`);
+  ADD KEY `FK5nm4b09lhr8moaj39v27icmn5` (`team_id`),
+  ADD KEY `FK4n0ts32m2ffsjoyp98isswvdx` (`person_id`);
 
 --
 -- Indexes for table `position`

@@ -6,8 +6,8 @@
         <Key>315c9bb0-b148-43a3-bf75-b7581f74ba3e</Key>
         <Port>80</Port>
         <MaxUpload>10000000</MaxUpload>
-        <Version>5.0.5</Version>
-        <Build>877</Build>
+        <Version>6.0.3</Version>
+        <Build>979</Build>
         <Shutdown>
             <Port>8005</Port>
             <Message>shutdownCIS</Message>
